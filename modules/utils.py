@@ -67,6 +67,8 @@ class ICAOConst():
 def celciusToKelvin(temp):
     return temp + 273.15
 
+def kelvinToCelcius(temp):
+    return temp - 273.15
 
 def mBarTohPa(val):
     return val
