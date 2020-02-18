@@ -1,4 +1,4 @@
-from modules.utils import ICAOConst as con
+from .utils import ICAOConst as con
 import math
 
 
