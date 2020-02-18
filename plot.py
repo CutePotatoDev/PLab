@@ -1,10 +1,16 @@
 import plotille
+import sys
+import codecs
 
 
 class Plot(plotille.Figure):
     def __init__(self, width=None, height=None, legend=False):
         """ Simple plot's maker.
         """
+        # UTF-8 auto setup.
+        if sys.stdout.encoding.lower() == "utf-8":
+            sys.stdout = codecs.getwriter("UTF-8")(sys.stdout.detach())
+
         super().__init__()
 
         if width is not None:
