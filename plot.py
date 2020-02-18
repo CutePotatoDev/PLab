@@ -8,7 +8,7 @@ class Plot(plotille.Figure):
         """ Simple plot's maker.
         """
         # UTF-8 auto setup.
-        if sys.stdout.encoding.lower() == "utf-8":
+        if sys.stdout.encoding.lower() != "utf-8":
             sys.stdout = codecs.getwriter("UTF-8")(sys.stdout.detach())
 
         super().__init__()
